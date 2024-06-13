@@ -20,7 +20,7 @@ def receipes(request):
         print(receipdes)
         print(receipname)
         Receipe.objects.create(
-            user=request.user,  # Ensure user is associated with the recipe
+            user=request.user, 
             image=image,
             receipdes=receipdes,
             receipname=receipname
