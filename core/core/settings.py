@@ -14,6 +14,13 @@ import os
 from pathlib import Path
 import dj_database_url
 
+from django.core.wsgi import get_wsgi_application
+
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "core.settings")
+
+application = get_wsgi_application()
+
+
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = 'django-insecure-&^31)6tu#+33u96q6e&(_0a%2f-o2nj8t^7uiof4mucgo3w3n2'
